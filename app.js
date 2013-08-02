@@ -39,12 +39,10 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.post('/enroll', mobconf.enroll);
+app.get('/enrollment', mobconf.enrollment);
 app.get('/scep', mobconf.scep);
 
-//app.use('/enrollment/', express.static(__dirname + '/public'));
-app.post('/enroll', mobconf.enroll);
-
-app.get('/udid.mobileconfig', mobconf.file);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

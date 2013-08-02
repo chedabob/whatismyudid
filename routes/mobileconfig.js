@@ -12,7 +12,7 @@ exports.file = function(req, res){
 
 exports.enroll = function(req, res){
     console.log(req.rawBody);
-    res.redirect('http://192.168.1.103:3000/enrollment');
+    res.redirect('https://www.whatismyudid.us/enrollment');
 };
 
 exports.scep = function(req, res){
@@ -23,8 +23,8 @@ exports.scep = function(req, res){
 exports.enrollment = function(req, res){
 
     res.set('Content-Type', 'application/x-apple-aspen-config');
-    fs.readFile("phase2.mobileconfig", 'utf-8', function (error, data) {
+    fs.readFile("stage2.mobileconfig", 'utf-8', function (error, data) {
         res.send(data );
     });
-    console.log("Enrollemtn");
+    console.log("Enrollment");
 };
