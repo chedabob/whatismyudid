@@ -16,5 +16,5 @@ exports.enroll = function(req, res){
 
     var match = req.rawBody.match(/[a-f\d]{40}/);
 
-    res.redirect(301,'http://192.168.1.103:3000/enrollment?udid=' + match[0]);
+    res.redirect(301,'/enrollment?udid=' + match[0]);
 };
