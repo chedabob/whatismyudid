@@ -14,7 +14,7 @@ exports.scep = function(req, res){
     {
         console.log("Getting ca cert");
         fs.readFile("keychain.crt", 'utf-8', function (error, data) {
-            console.log("data");
+            console.log(data);
 
             res.send(data );
         });
