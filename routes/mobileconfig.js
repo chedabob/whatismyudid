@@ -2,29 +2,18 @@
 /*
  * GET mobile config
  */
- var fs = require("fs");
 
-
-exports.scep = function(req, res){
+exports.enrollment = function(req, res){
+    res.set('Content-Type', 'text/html');
     var url = require('url');
     var url_parts = url.parse(req.url, true);
     var query = url_parts.query;
 
-    if (query.operation === "GetCACert")
-    {
-        console.log("Getting ca cert");
-        fs.readFile("keychain.crt", 'utf-8', function (error, data) {
-            console.log(data);
-
-            res.send(data );
-        });
-    }
-};
-
+    res.send(query.udid);
+}
 exports.enroll = function(req, res){
 
-    res.set('Content-Type', 'application/x-apple-aspen-config');
-    fs.readFile("stage2.mobileconfig", 'utf-8', function (error, data) {
-        res.send(data );
-    });
+    var match = req.rawBody.match(/[a-f\d]{40}/);
+
+    res.redirect(301,'http://192.168.1.103:3000/enrollment?udid=' + match[0]);
 };
