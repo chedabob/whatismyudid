@@ -16,7 +16,7 @@
                 <key>PayloadContent</key>
                 <dict>
                     <key>URL</key>
-                    <string>--SCEP URL Here--</string>
+                    <string>http://192.168.1.103:3000/scep</string>
                     <key>Name</key>
                     <string>EnrollmentCAInstance</string>
                     <key>Subject</key>

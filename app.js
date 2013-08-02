@@ -39,8 +39,8 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+
 app.post('/enroll', mobconf.enroll);
-app.get('/enrollment', mobconf.enrollment);
 app.get('/scep', mobconf.scep);
 
 http.createServer(app).listen(app.get('port'), function(){
