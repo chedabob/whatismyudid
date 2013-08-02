@@ -9,7 +9,8 @@ exports.enrollment = function(req, res){
     var url_parts = url.parse(req.url, true);
     var query = url_parts.query;
 
-    res.send(query.udid);
+    res.render('udid', { udid: query.udid });
+
 }
 exports.enroll = function(req, res){
 
