@@ -12,7 +12,10 @@ exports.scep = function(req, res){
 
     if (query.operation === "GetCACert")
     {
+        console.log("Getting ca cert");
         fs.readFile("keychain.crt", 'utf-8', function (error, data) {
+            console.log("data");
+
             res.send(data );
         });
     }
