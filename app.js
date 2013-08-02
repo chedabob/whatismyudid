@@ -39,7 +39,6 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/enrollment', mobconf.enrollment);
 app.get('/scep', mobconf.scep);
 
 //app.use('/enrollment/', express.static(__dirname + '/public'));
