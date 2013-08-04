@@ -9,8 +9,16 @@ exports.enrollment = function(req, res){
     var url_parts = url.parse(req.url, true);
     var query = url_parts.query;
 
-    res.render('udid', { udid: query.udid });
-
+    var tudid = query.udid;
+    if (tudid) // If it's in the query, store it and redirect (so the user doesn't see the UDID being sent in the URL)
+    {
+        res.cookie('udid',query.udid, { maxAge: 900000});
+        res.redirect('/enrollment');
+    }
+    else
+    {
+        res.render('udid', { udid: req.cookies.udid});
+    }
 }
 exports.enroll = function(req, res){
 

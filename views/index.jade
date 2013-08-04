@@ -3,5 +3,6 @@ extends layout
 block content
   h1= title
   p To get your UDID, touch Go below and install the temporary profile. iOS will take care of the rest
+  p #{udid}
   h1
-    a(href='/stage1.mobileconfig') Go!
+    a.gobutton(href='/stage1.mobileconfig') Go!
