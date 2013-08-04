@@ -12,7 +12,7 @@ exports.index = function(req, res){
     }
     else
     {
-        res.render('index', { title: 'WhatIsMyUDID'});
+        res.render('index', { title: 'WhatIsMyUDID.us'});
     }
 
 };
