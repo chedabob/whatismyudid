@@ -17,7 +17,10 @@ exports.enrollment = function(req, res){
     }
     else
     {
-        res.render('udid', { udid: req.cookies.udid});
+        if (req.cookies.udid)
+            res.render('udid', { udid: req.cookies.udid});
+        else   // No cookie, redirect back to home page
+            res.redirect('/');
     }
 }
 exports.enroll = function(req, res){
