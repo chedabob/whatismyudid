@@ -2,7 +2,4 @@
 //- Pull from cookie on index.html
 //- Move analytics and adverts into a footer.jade file
 //- Add footer.jade into layout.jade
-- Put udid in session instead of url param
-- Figure out how to force heroku to https
-- Point DNS at heroku
 - Favicon
