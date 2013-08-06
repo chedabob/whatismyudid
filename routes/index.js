@@ -4,15 +4,23 @@
  */
 
 exports.index = function(req, res){
-    //res.cookie('arble', 'ehehreh', { maxAge: 900000 });
 
-    if (req.cookies.udid)
+    var r = require('ua-parser').parse(req.headers['user-agent']);
+
+    if (r.os.family !== 'iOS')
     {
-        res.redirect('/enrollment');
+        res.render('index-notios', { title: 'WhatIsMyUDID.us'});
     }
     else
     {
-        res.render('index', { title: 'WhatIsMyUDID.us'});
+        if (req.cookies.udid)
+        {
+            res.redirect('/enrollment');
+        }
+        else
+        {
+            res.render('index', { title: 'WhatIsMyUDID.us'});
+        }
     }
 
 };
