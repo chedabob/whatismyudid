@@ -1,5 +1,0 @@
-//- Write UDID to cookie
-//- Pull from cookie on index.html
-//- Move analytics and adverts into a footer.jade file
-//- Add footer.jade into layout.jade
-- Favicon
