@@ -5,26 +5,22 @@
     <key>PayloadContent</key>
     <dict>
         <key>URL</key>
-        <string>--Enrollment Url here--</string>
+	<string>https://udid.mattmalone.app/enroll</string>
         <key>DeviceAttributes</key>
         <array>
             <string>UDID</string>
-            <string>IMEI</string>
-            <string>ICCID</string>
-            <string>VERSION</string>
-            <string>PRODUCT</string>
         </array>
     </dict>
     <key>PayloadOrganization</key>
-    <string>com.test</string>
+    <string>com.mattm</string>
     <key>PayloadDisplayName</key>
-    <string>Profile Service</string>
+    <string>udid.mattmalone.app</string>
     <key>PayloadVersion</key>
     <integer>1</integer>
     <key>PayloadUUID</key>
-    <string>D9A58480-FE8A-4B22-B217-FA63BD0160E6</string>
+    <string>0092ebbc-8bd6-4642-b24c-e8bd1ba85716</string>
     <key>PayloadIdentifier</key>
-    <string>com.test.profile-service</string>
+    <string>com.mattm.profile-service</string>
     <key>PayloadDescription</key>
     <string>This temporary profile will be used to find and display your current device's UDID.</string>
     <key>PayloadType</key>

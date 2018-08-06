@@ -5,9 +5,8 @@
 
 exports.index = function(req, res){
 
-    var r = require('ua-parser').parse(req.headers['user-agent']);
-
-    if (r.os.family !== 'iOS')
+    var ua = require('useragent')
+    if (ua.is(req.headers['user-agent']).mobile_safari)
     {
         res.render('index-notios', { title: 'WhatIsMyUDID.us'});
     }

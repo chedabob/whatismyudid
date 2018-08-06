@@ -6,9 +6,11 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "3.3.4",
-    "jade": "*",
-    "ua-parser": "*"
+    "body-parser": "1.18.3",
+    "cookie-parser": "1.4.3",
+    "express": "4.16.3",
+    "pug": "2.0.3",
+    "useragent": "2.3.0"
   },
   "engines": {
     "node": "0.10.x",
