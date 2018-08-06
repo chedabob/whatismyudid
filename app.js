@@ -28,7 +28,8 @@ app.use(function(req, res, next) {
         next();
     });
 });
-app.use(bodyParser);
+app.use(express.urlencoded({extended: true})); 
+//app.use(bodyParser);
 app.use(cookieParser('To3mKG80i9'));
 app.use(express.static(path.join(__dirname, 'public')));
 
