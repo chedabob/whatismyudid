@@ -11,11 +11,11 @@
     "ua-parser": "*"
   },
   "engines": {
-	"node": "0.10.x",
-    "npm":  "1.2.x"
+    "node": "0.10.x",
+    "npm": "1.2.x"
   },
-  "repository" :
-  { "type" : "git", 
-	"url" : "https://github.com/chedabob/whatismyudid"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chedabob/whatismyudid"
   }
 }
