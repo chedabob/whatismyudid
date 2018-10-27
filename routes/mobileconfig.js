@@ -25,7 +25,7 @@ exports.enrollment = function(req, res){
 }
 exports.enroll = function(req, res){
 
-    var match = req.rawBody.match(/[a-f\d]{40}/);
+    var match = req.rawBody.match(/(0000[\d]{4}-00[A-Fa-f\d]+)|([a-fA-F\d]{40})/);
 
     res.redirect(301,'/enrollment?udid=' + match[0]);
 };
