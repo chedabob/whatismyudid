@@ -13,7 +13,7 @@ exports.index = function(req, res){
     }
     else
     {
-        if (req.cookies.udid)
+        if (req.cookies.newudid)
         {
             res.redirect('/enrollment');
         }
