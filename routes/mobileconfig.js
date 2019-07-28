@@ -12,15 +12,18 @@ exports.enrollment = function(req, res){
     var tudid = query.udid;
     if (tudid) // If it's in the query, store it and redirect (so the user doesn't see the UDID being sent in the URL)
     {
-        res.cookie('udid',query.udid, { maxAge: 365 * 24 * 60 * 60 * 1000});     // Store for 1 year
+        res.cookie('newudid',query.udid, { maxAge: 7 * 24 * 60 * 60 * 1000});     // Store for 1 week
         res.redirect('/enrollment');
     }
     else
     {
-        if (req.cookies.udid)
-            res.render('udid', { udid: req.cookies.udid, title: 'WhatIsMyUDID.us'});
-        else   // No cookie, redirect back to home page
+	var cookie = req.cookies.newudid;
+        if (cookie){
+            res.render('udid', { udid: cookie, title: 'udid.fyi'});
+	}
+        else {   // No cookie, redirect back to home page
             res.redirect('/');
+	}
     }
 }
 exports.enroll = function(req, res){
