@@ -3,11 +3,7 @@ extends layout
 block content
   h1= title
   p To get your UDID, touch Go below and install the temporary profile. iOS will take care of the rest
-  p Disclaimer: This site will set a cookie containing your UDID for your next visit
+  p Disclaimer: For this site to work, it needs to store your UDID in a cookie. It will expire after 10 minutes.
   p #{udid}
   h1
-    a.gobutton(href='/stage1.mobileconfig') Go!
-    | <br/><br/>
-    a(href='/iOSGuidInstructions.pdf') Offline Instructions PDF
-    | <br/<br/>
-    a.smallText(href='https://github.com/chedabob/whatismyudid') Source on github
+    a.btn(href='/stage1.mobileconfig') Go!

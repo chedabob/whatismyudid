@@ -1,4 +1,4 @@
-FROM node:10.7.0-alpine
+FROM node:10.18.1-alpine
 
 ENV PORT=8001
 
@@ -12,6 +12,6 @@ COPY routes/ /src/routes
 WORKDIR /src
 RUN npm i
 
-EXPOSE 8000
+EXPOSE 8001
 
 CMD npm start
