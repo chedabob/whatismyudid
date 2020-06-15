@@ -27,6 +27,7 @@ body {
 #ContentBox {
     padding: 24px 48px;
     text-align: center;
+    overflow-wrap: anywhere;
 }
 
 .smallText {
