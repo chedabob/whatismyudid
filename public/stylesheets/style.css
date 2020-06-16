@@ -6,6 +6,7 @@ body {
     background: #2193b0;
     background: linear-gradient(293deg, #2193b0, #6dd5ed);
     color: black;
+    overflow: hidden;
 }
 
 @media (prefers-color-scheme: light) {
@@ -27,7 +28,13 @@ body {
 #ContentBox {
     padding: 24px 48px;
     text-align: center;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-user-select: text;
+}
+
+#udid {
+    word-break: break-all;
 }
 
 .smallText {
