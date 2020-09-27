@@ -29,7 +29,7 @@ app.use(function(req, res, next) {
     });
 });
 app.use(express.urlencoded({extended: true})); 
-app.use(cookieParser('ddd'));
+app.use(cookieParser(process.env.COOKIE_KEY || 'f76210bc2acc4f54af5754e15b0aab05'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', routes.index);
