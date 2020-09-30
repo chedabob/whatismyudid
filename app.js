@@ -26,7 +26,13 @@ app.use(express.raw({
   'type' : 'application/pkcs7-signature'
 }))
 
-app.use(helmet())
+app.use(helmet({
+  hsts : {
+    preload: true,
+    maxAge: 31536000,
+    includeSubDomains: true
+  }
+}))
 app.use(sslRedirect(['production'], 301));
 app.get('/', routes.index);
 
