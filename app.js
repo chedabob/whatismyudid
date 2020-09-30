@@ -10,6 +10,8 @@ var express = require('express')
   , path = require('path');
   
 var cookieParser = require('cookie-parser')
+const helmet = require("helmet");
+const sslRedirect = require('heroku-ssl-redirect').default
 
 var app = express();
 
@@ -24,6 +26,8 @@ app.use(express.raw({
   'type' : 'application/pkcs7-signature'
 }))
 
+app.use(helmet())
+app.use(sslRedirect(['production'], 301));
 app.get('/', routes.index);
 
 app.post('/enroll', mobconf.enroll);
