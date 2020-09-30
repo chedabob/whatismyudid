@@ -29,8 +29,13 @@ exports.enrollment = function(req, res){
     }
 }
 exports.enroll = function(req, res){
-    
-    var match = req.rawBody.match(/(0000[\d]{4}-00[A-Fa-f\d]+)|([a-fA-F\d]{40})/);
-    
-    res.redirect(301,'/enrollment?udid=' + match[0]);
+    var match = req.body.toString().match(/(0000[\d]{4}-00[A-Fa-f\d]+)|([a-fA-F\d]{40})/);
+
+    if (match && match.length > 0) {
+        res.redirect(301,'/enrollment?udid=' + match[0]);
+    }
+    else {
+        res.status(400)
+        res.send('Did not find a valid UDID in the body')
+    }
 };

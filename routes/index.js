@@ -6,12 +6,7 @@
 exports.index = function(req, res){
 
     var ua = require('useragent');
-	var domain = 'udid.fyi';
-    if (!ua.is(req.headers['user-agent']).mobile_safari)
-    {
-        res.render('index-notios', { title: domain});
-    }
-    else
+    if (ua.is(req.headers['user-agent']).mobile_safari)
     {
         if (req.cookies.newudid)
         {
@@ -19,8 +14,12 @@ exports.index = function(req, res){
         }
         else
         {
-            res.render('index', { title: domain});
+            res.render('index');
         }
+    }
+    else
+    {
+        res.render('index-notios');
     }
 
 };
