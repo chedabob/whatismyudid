@@ -18,7 +18,6 @@ app.set('port', process.env.PORT || 3001);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'pug');
 
-app.use(express.urlencoded({extended: true})); 
 app.use(cookieParser(process.env.COOKIE_KEY || 'f76210bc2acc4f54af5754e15b0aab05'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.raw({
