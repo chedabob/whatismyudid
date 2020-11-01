@@ -1,0 +1,1 @@
+openssl smime -sign -in udid.mobileconfig -out stage1.mobileconfig.signed -signer ./udid.crt -inkey ./udid.key -certfile ./udidchain.crt -outform der -nodetach

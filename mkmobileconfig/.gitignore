@@ -1,0 +1,15 @@
+node_modules/
+udid.mobileconfig
+signed.mobileconfig
+
+
+# loadkeys.sh files
+udid.key
+udid.crt
+udidchain.crt
+
+# mkmobileconfig.js files
+udid.mobileconfig
+
+# sign.sh files
+stage1.mobileconfig.signed

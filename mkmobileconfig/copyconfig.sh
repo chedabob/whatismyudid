@@ -1,0 +1,1 @@
+cp stage1.mobileconfig.signed ../public/stage1.mobileconfig
