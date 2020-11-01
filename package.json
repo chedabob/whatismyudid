@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "cd mkmobileconfig && npm i && ./loadkeys.sh && node mkmobileconfig.js && ./sign.sh && ./copyconfig.sh"
   },
   "dependencies": {
     "cookie-parser": "1.4.5",
