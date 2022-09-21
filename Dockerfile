@@ -1,4 +1,4 @@
-FROM node:10.18.1-alpine
+FROM node:lts-alpine
 
 ENV PORT=8001
 
@@ -11,6 +11,7 @@ COPY routes/ /src/routes
 
 WORKDIR /src
 RUN npm i
+RUN npm build
 
 EXPOSE 8001
 
