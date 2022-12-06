@@ -13,7 +13,7 @@ jobs:
         - uses: actions/checkout@v3
         - uses: superfly/flyctl-actions/setup-flyctl@master
         - run: |
-           fly deploy --remote-only
+           flyctl deploy --remote-only
            --build-arg MK_NAME=${{ secrets.MK_NAME }}
            --build-arg MK_ORG=${{ secrets.MK_ORG }}
            --build-arg MK_URL=${{ secrets.MK_URL }}
