@@ -5,6 +5,12 @@ on:
       - main
 env:
   FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+  MK_NAME: ${{ secrets.MK_NAME }}
+  MK_ORG: ${{ secrets.MK_ORG }}
+  MK_URL: ${{ secrets.MK_URL }}
+  UDID_CERT: ${{ secrets.UDID_CERT }}
+  UDID_CHAIN: ${{ secrets.UDID_CHAIN }}
+  UDID_KEY: ${{ secrets.UDID_KEY }}
 jobs:
   deploy:
       name: Deploy app
@@ -14,9 +20,9 @@ jobs:
         - uses: superfly/flyctl-actions/setup-flyctl@master
         - run: |
            flyctl deploy --remote-only
-           --build-arg MK_NAME=${{ secrets.MK_NAME }}
-           --build-arg MK_ORG=${{ secrets.MK_ORG }}
-           --build-arg MK_URL=${{ secrets.MK_URL }}
-           --build-arg UDID_CERT=${{ secrets.UDID_CERT }}
-           --build-arg UDID_CHAIN=${{ secrets.UDID_CHAIN }}
-           --build-arg UDID_KEY=${{ secrets.UDID_KEY }}
+           --build-arg MK_NAME=$MK_NAME
+           --build-arg MK_ORG=$MK_ORG
+           --build-arg MK_URL=$MK_URL
+           --build-arg UDID_CERT=$UDID_CERT
+           --build-arg UDID_CHAIN=$UDID_CHAIN
+           --build-arg UDID_KEY=$UDID_KEY
