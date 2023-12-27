@@ -11,7 +11,6 @@ var express = require('express')
   
 var cookieParser = require('cookie-parser')
 const helmet = require("helmet");
-const sslRedirect = require('heroku-ssl-redirect').default
 
 var app = express();
 
@@ -33,7 +32,6 @@ app.use(helmet({
     includeSubDomains: true
   }
 }))
-app.use(sslRedirect(['production'], 301));
 app.get('/', routes.index);
 
 app.post('/enroll', mobconf.enroll);

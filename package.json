@@ -7,16 +7,15 @@
     "build": "cd mkmobileconfig && npm i && ./loadkeys.sh && node mkmobileconfig.js && ./sign.sh && ./copyconfig.sh"
   },
   "dependencies": {
-    "cookie-parser": "1.4.5",
+    "cookie-parser": "1.4.6",
     "express": "4.18.2",
-    "helmet": "^4.1.1",
-    "heroku-ssl-redirect": "^0.1.1",
+    "helmet": "^7",
     "pug": "^3",
     "useragent": "2.3.0"
   },
   "engines": {
-    "node": "^16",
-    "npm": "^8"
+    "node": "^20",
+    "npm": "^10"
   },
   "repository": {
     "type": "git",
